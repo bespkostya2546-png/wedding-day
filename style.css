@@ -1,0 +1,27 @@
+.block_1 {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.image_block_1 {
+    height: 1518px;
+    width: 1012px;
+} 
+
+.image_container_1 {
+    background-color: aqua;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.text_overlay_1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -80%);
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
