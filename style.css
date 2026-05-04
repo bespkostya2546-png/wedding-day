@@ -1,12 +1,163 @@
-.block_1 {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf5f0;  /* нежный тёплый фон */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.glavnaya {
+    display: inline-block;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+
+/* Основная карточка - полностью адаптивна 
+.wedding-card {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    /*border-radius: 48px;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: all 0.2s ease;
+} */
+
+/* Внутренний контент с отступами, которые уменьшаются на телефоне */
+.wedding-card {
+    margin-top: 20px;
+    max-height: 100vh;
+    height: 100%;
+    width: 700px;
+    background-image: url(image/image_1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+/* Блок с датой, как на твоём скриншоте */
+.date-block {
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.date-numbers {
+    display: flex;
+    justify-content: center;
+}
+
+.date-numbers span {
+    font-size: clamp(3rem, 5vw, 9rem);
+    font-family: Angst, serif;
+    color: #D7D7B5;
+    font-weight: 540;
+}
+
+/* Слово "wedding day" — деликатно, под датой */
+.wedding-day {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px; 
+    max-width: max-content;
+    width: 100%;
+}
+
+.names {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+
+.nameDanDar {
+    text-align: left;
+    width: 25vh;
+}
+
+/*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной */
+@media (max-width: 768px) {
+
+    .wedding-card {
+        max-width: 680px;
+        width: 100%;
+        
+        max-height: 800px;
+        height: 100%;
+    }
+} 
+
+/* Телефон: уменьшаем внутренние отступы, чтобы контент дышал, но не был слишком прижат  */
+@media (max-width: 480px) {
+
+    .wedding-card {
+        max-width: 450px;
+        width: 100%;
+        max-height: 800px;
+        height: 80%;
+    }
+
+    .nameDanDar {
+        width: 220px;
+    }
+}
+
+
+/* Для очень маленьких экранов (меньше 360px) ещё мягче сжимаем 
+@media (max-width: 360px) {
+    .content {
+        padding: 1.2rem 1rem;
+    }
+    .date-numbers span, .date-sep {
+        line-height: 1.2;
+    }
+    .names h1 {
+        letter-spacing: 2px;
+    }
+} */
+
+/* лёгкая анимация при наведении для элегантности (на десктопе) 
+.wedding-card {
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+@media (hover: hover) {
+    .wedding-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 32px 48px -16px rgba(0, 0, 0, 0.2);
+    }
+} */
+
+/* кастомный курсор / выделение текста — для настроения */
+::selection {
+    background: #e9dbc9;
+    color: #3e3529;
+}
+
+/* .block_1 {
     background-color: red;
     display: flex;
     justify-content: center;
 }
 
 .image_block_1 {
-    height: 1518px;
-    width: 1012px;
+    height: 100%;
+    width: 100%;
 } 
 
 .image_container_1 {
@@ -14,14 +165,37 @@
     position: relative;
     width: 100%;
     max-width: 800px;
+
 }
 
 .text_overlay_1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 10%;
     transform: translate(-30%, -80%);
     width: 80%;
     padding: 20px;
     text-align: center;
+    font-family: Angst;
+    color: #525252;
+    font-size: larger;
+} */
+
+@font-face {
+  font-family: 'Angst';
+  src: url('fonts/Angst_Font/Angst-Normal.otf') format('otf'),
+  url('fonts/Angst_Font/Angst-Bold.otf') format('otf'),
+  url('fonts/Angst_Font/Angst-BoldSerif.otf') format('otf'),
+  url('fonts/Angst_Font/Angst-NormalSerif.otf') format('otf'),
+  url('fonts/Angst_Font/Angst-Thin.otf') format('otf'),
+  url('fonts/Angst_Font/Angst-ThinSerif.otf') format('otf'),
+  url('fonts/Angst_Font/AngstVF.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ekaterinavelikayaone';
+  src: url('fonts/Ekaterina_Velikaya_One/ekaterinavelikayaone.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }
