@@ -5,13 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Свадьба Даниила и Дарьи</title>
+    <script src="javaskripts.js"></script>
 </head>
 <body>
+
     <video autoplay muted loop playsinline id="background-video" poster="image/poster_fon.jpeg">
         <source src="video/0504 (2).mp4" type="video/mp4">
         <source src="video/0504-_2_.webm" type="video/webm">
     </video>
+
+     <!-- ПЕРВИЧНЫЙ БЛОК (прелоадер) -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <h1 class="intro-title">Вам пришло</h1>
+            <img class="intro-subtitle" src="image/Priglashenie_white.png">
+            <!-- КНОПКА-СЕРДЕЧКО (SVG версия) -->
+            <div id="enter-button" class="heart-button">
+                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.54L12 21.35Z" 
+                        fill="url(#heartGradient)" stroke="none"/>
+                    <defs>
+                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ee5a24;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            
+            <div class="intro-p"> 
+                <p class="click-text">нажмите на сердечко что бы продолжить</p>
+            </div>
+        </div>
+    </div>
+
     <div class="glavnaya">
+        <div class="first_block">
+            <div class="wedding-card">
+                <div class="content">
+                    <!-- Блок даты 18 | 07 | 2026 -->
+                    <div class="date-block">
+                        <div class="date-numbers">
+                            <span>18|07|2026</span>
+                        </div>
+                        <img class="wedding-day" src="image/Wedding_day (1).png">
+                    </div>
+                    <!-- Имена: ДАНИНА ДАРЬЯ -->
+                    <div class="names">
+                        <img class="nameDanDar" src="image/Daniil&Daria.png">
+                        <!-- <h1>ДАНИИЛ &<br>ДАРЬЯ</h1> -->
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="wedding-card">
             <div class="content">
                 <!-- Блок даты 18 | 07 | 2026 -->
@@ -45,6 +91,12 @@
             </div>
         </div>
     </div>
+
+    <!-- АУДИО ЭЛЕМЕНТ (скрытый) -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="audio/Skriptonit_-_JEto_lyubov_47828756.mp3" type="audio/mpeg">
+        <source src="audio/Skriptonit_-_JEto_lyubov_47828756.ogg" type="audio/ogg">
+    </audio>
     
     <!-- <div class="block_1">
         <div class="image_container_1">
