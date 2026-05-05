@@ -21,22 +21,21 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    background-color: rgb(251, 253, 234); /* #FFFDF8 */
-    height: 100%;
-    width: 100%;
-    padding: 20px 200px;
+    background-color: #fffdf8b1;
+    height: auto;
+    width: auto;
 }
 
 #background-video {
-  width: 100vw; /* Ширина, равная ширине области просмотра */
-  height: 100vh; /* Высота, равная высоте области просмотра */
-  object-fit: cover; /* Автоматически масштабирует видео, сохраняя его пропорции и заполняя экран, при необходимости обрезая края */
-  position: fixed; /* Фиксирует положение видео относительно области просмотра */
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1; /* Размещает видео под остальной контент */
+    width: 100vw; /* Ширина, равная ширине области просмотра */
+    height: 100vh; /* Высота, равная высоте области просмотра */
+    object-fit: cover; /* Автоматически масштабирует видео, сохраняя его пропорции и заполняя экран, при необходимости обрезая края */
+    position: fixed; /* Фиксирует положение видео относительно области просмотра */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1; /* Размещает видео под остальной контент */
 }
 
 
@@ -54,7 +53,7 @@ body {
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
 .wedding-card {
     margin-top: 20px;
-    max-height: 100vh;
+    min-height: 100vh;
     height: 100%;
     width: 700px;
     background-image: url(image/image_1.png);
@@ -78,10 +77,11 @@ body {
 }
 
 .date-numbers span {
-    font-size: clamp(3rem, 5vw, 9rem);
+    font-size: 40px;
     font-family: Angst, serif;
     color: #525252; /*  #D7D7B5; */
     font-weight: 540;
+    margin-bottom: 20px;
 }
 
 /* Слово "wedding day" — деликатно, под датой */
@@ -89,29 +89,29 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 10px; 
+    margin: auto; 
     max-width: max-content;
-    width: 100%;
+    width: 90%;
 }
 
 .names {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     width: 100%;
 }
 
 .nameDanDar {
     text-align: left;
-    width: 25vh;
+    width: 30vh;
 }
 
-/*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной */
+/*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной 
 @media (max-width: 1300px) {
 
     .first_block {
         padding: 0px;
     }
-} 
+}  */
 
 
 /*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной */
@@ -123,6 +123,15 @@ body {
         
         max-height: 800px;
         height: 100%;
+    }
+
+    .names {
+        bottom: 5%;
+    }
+
+    .nameDanDar {
+        text-align: left;
+        width: 25vh;
     }
 } 
 
@@ -136,8 +145,17 @@ body {
         height: 80%;
     }
 
+    .names {
+        bottom: 5%;
+    }
+
     .nameDanDar {
-        width: 220px;
+        text-align: left;
+        width: 20vh;
+    }
+
+    .date-numbers span {
+        font-size: 40px;
     }
 }
 
