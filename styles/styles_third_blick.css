@@ -141,6 +141,12 @@
         width: 400px;
     }
 
+    .timer_text {
+        width: 290px;
+    }
+    .timer_text span {
+        font-size: 20px;
+    }
     .timer-container {
         gap: 15px;
     }
@@ -157,7 +163,7 @@
 } 
 
 /* Телефон: уменьшаем внутренние отступы, чтобы контент дышал, но не был слишком прижат  */
-@media (max-width: 520px) {
+@media (max-width: 480px) {
 
     .card_img_jule {
         width: 300px;
