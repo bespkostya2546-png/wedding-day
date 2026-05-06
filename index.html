@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles_first_block.css">
-    <link rel="stylesheet" href="styles_second_block.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles_first_block.css">
+    <link rel="stylesheet" href="styles/styles_second_block.css">
+    <link rel="stylesheet" href="styles/styles_third_blick.css">
+    <link rel="stylesheet" href="styles/styles_fourth_block.css">
     <title>Свадьба Даниила и Дарьи</title>
     <script src="javaskripts.js"></script>
 </head>
@@ -16,12 +18,12 @@
         <source src="video/0504-_2_.webm" type="video/webm">
     </video>
 
-     <!-- ПЕРВИЧНЫЙ БЛОК (прелоадер) -->
+     <!-- ПЕРВИЧНЫЙ БЛОК (прелоадер)
     <div id="intro-overlay">
         <div class="intro-content">
             <h1 class="intro-title">Вам пришло</h1>
             <img class="intro-subtitle" src="image/Priglashenie_white.png">
-            <!-- КНОПКА-СЕРДЕЧКО (SVG версия) -->
+            <!- КНОПКА-СЕРДЕЧКО (SVG версия) ->
             <div id="enter-button" class="heart-button">
                 <svg class="heart-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.54L12 21.35Z" 
@@ -39,7 +41,7 @@
                 <p class="click-text">нажмите на сердечко что бы продолжить</p>
             </div>
         </div>
-    </div> 
+    </div>  -->
 
     <div class="glavnaya">
         <!-- Первый блок, wedding day -->
@@ -65,6 +67,9 @@
         <!-- Второй блок, Дорогие гости -->
         <div class="second_block">
             <div class="dear_guests-card">
+                <!-- <div class="tn-atom" style="background-image:url('https://static.tildacdn.com/tild3533-3737-4765-b334-343562306437/_.svg');" 
+                    aria-label="" role="img"> 
+                </div> -->
                 <div class="card_img_hearts">
                     <img class="img_hearts" src="image/hearts.svg">
                 </div>
@@ -79,21 +84,71 @@
             </div>
         </div>
         
-        <!-- -->
-        <div class="wedding-card">
-            <div class="content">
-                <!-- Блок даты 18 | 07 | 2026 -->
-                <div class="date-block">
-                    <div class="date-numbers">
-                        <span>18|07|2026</span>
+        <!-- Третий блок, календарь, до свадьбы осталось -->
+        <div class="third_block">
+            <div class="dear_guests-card">
+                <div class="card_img_jule">
+                    <img class="img_jule" src="image/Jule (1).png">
+                </div>
+                <div class="card_img_calendar">
+                    <img class="img_calendar" src="image/kalendar_date.png">
+                </div>
+                <div class="timer_text">
+                    <span>До свадьбы осталось...</span>
+                </div>
+                <div class="timer-container">
+                    <div class="timer-item">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45" />
+                            <circle class="timer-progress" id="days-progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <span class="timer-value" id="days">00</span>
+                        <span class="timer-label">Дней</span>
                     </div>
-                    <img class="wedding-day" src="image/Wedding_day_1x.png">
+                    
+                    <div class="timer-item">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45" />
+                            <circle class="timer-progress" id="hours-progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <span class="timer-value" id="hours">00</span>
+                        <span class="timer-label">Часов</span>
+                    </div>
+                    
+                    <div class="timer-item">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45" />
+                            <circle class="timer-progress" id="minutes-progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <span class="timer-value" id="minutes">00</span>
+                        <span class="timer-label">Минут</span>
+                    </div>
+                    
+                    <div class="timer-item">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-bg" cx="50" cy="50" r="45" />
+                            <circle class="timer-progress" id="seconds-progress" cx="50" cy="50" r="45" />
+                        </svg>
+                        <span class="timer-value" id="seconds">00</span>
+                        <span class="timer-label">Секунд</span>
+                    </div>
                 </div>
-                <!-- Имена: ДАНИНА ДАРЬЯ -->
-                <div class="names">
-                    <img class="nameDanDar" src="image/Daniil&Daria.png">
-                    <!-- <h1>ДАНИИЛ &<br>ДАРЬЯ</h1> -->
+                <hr class="content_line">
+            </div>
+        </div>
+
+        <!-- Четвертый блок, Дорогие гости -->
+        <div class="fourd_block">
+            <div class="dear_guests-card">
+                <div class="card_img_hearts">
+                    <img class="img_hearts" src="image/hearts.svg">
                 </div>
+                <div class="card_img_dear">
+                    <img class="img_dear_guests" src="image/Mesto_torgestva.png">
+                </div>
+                <div class="card_img_location">
+                </div>
+                <hr class="content_line">
             </div>
         </div>
     </div>

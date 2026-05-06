@@ -53,10 +53,10 @@ body {
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
 .wedding-card {
     margin-top: 20px;
-    min-height: 100vh;
+    min-height: 85vh;
     height: 100%;
     width: 700px;
-    background-image: url(image/image_1.png);
+    background-image: url(../image/image_1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,7 +91,7 @@ body {
     text-align: center;
     margin: auto; 
     max-width: max-content;
-    width: 90%;
+    width: clamp(80%, 5vw, 90%);
 }
 
 .names {
@@ -151,7 +151,7 @@ body {
 
     .nameDanDar {
         text-align: left;
-        width: 20vh;
+        width: 25vh;
     }
 
     .date-numbers span {

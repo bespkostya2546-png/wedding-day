@@ -1,0 +1,33 @@
+.fourd_block {
+    /* background-color: rgba(165, 42, 42, 0.815); */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 30px;
+}
+
+.fourd_block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(165, 42, 42, 0.815);
+    mask: radial-gradient(circle at 20% 0%, transparent 85px, black 20px);
+    -webkit-mask: radial-gradient(circle at 20% 0%, transparent 85px, black 20px);
+
+} 
+
+.card_img_location {
+    background-image: url(../image/location_t.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    width: 200px;
+}
