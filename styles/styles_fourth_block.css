@@ -6,7 +6,7 @@
     position: relative;
     height: auto;
     width: auto;
-    padding: 30px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .fourd_block::before {
@@ -17,8 +17,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba(165, 42, 42, 0.815);
-    mask: radial-gradient(circle at 20% 0%, transparent 85px, black 20px);
-    -webkit-mask: radial-gradient(circle at 20% 0%, transparent 85px, black 20px);
+    mask: radial-gradient(circle at 10% 100%, transparent 85px, black 20px);
+    -webkit-mask: radial-gradient(circle at 10% 100%, transparent 85px, black 20px);
 
 } 
 
@@ -28,6 +28,7 @@
     position: relative;
     z-index: 1;
     justify-content: center;
+    align-content: center;
 }
 
 .card_img_hearts_four {
@@ -55,18 +56,19 @@
 
 .card_img_location {
     margin-top: 20px;
+    margin: 20px 25px 0px 25px;
     background-image: url(../image/location_t.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     height: 500px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 0px 50px;
+    border-radius: 20px;
 }
 
 .content_text_card {
@@ -100,6 +102,76 @@
     font-size: 18px;
 }
 
+.div_for_button {
+    display: flex;
+    justify-content: center;
+}
+
+.img_arrow {
+    margin-left: 10px;
+    width: 30px;
+}
+
+.button_yandex_maps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    height: max-content;
+    padding: 2% 7%;
+    font-family: Angst, serif;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 18px;
+    color: #FFFDF8;
+    border-color: #FFFDF8;
+    box-shadow: 10px;
+}
+
+/* Обертка для карты — управляем высотой и плавностью */
+    .maps_location_wrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0px 20px;
+    }
+    
+    /* Когда открыто — высота автоматическая (используем max-height достаточно большим) */
+    .maps_location_wrapper.open {
+        max-height: 450px; /* больше чем высота карты (400px + отступы) */
+    }
+    
+    /* Блок самой карты */
+    .maps_location {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    /* При открытом состоянии показываем карту с эффектом появления */
+    .maps_location_wrapper.open .maps_location {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Стили для кнопки (добавим активное состояние) */
+    .button_yandex_maps {
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    
+    .button_yandex_maps:active {
+        transform: scale(0.96);
+    }
+    
+    /* Если нужно плавное вращение стрелки или иконки, можно добавить */
+    /* Опционально: текст кнопки меняется */
+
 /*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной */
 @media (max-width: 768px) {
 
@@ -113,7 +185,6 @@
 
     .card_img_location {
         height: 400px;
-        padding: 0px 100px;
     }
 
     .content_text_four span{
@@ -142,16 +213,22 @@
     }
 
     .content_text_four span{
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .content_text_four_2 span{
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
 /* Телефон: уменьшаем внутренние отступы, чтобы контент дышал, но не был слишком прижат  */
 @media (max-width: 400px) {
     
+    .content_text_four{
+        width: 150px;
+    }
+    .content_text_four_2 {
+        width: 150px;
+    }
     
 }

@@ -25,7 +25,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(165, 42, 42, 0.815);
+    background-color: rgba(165, 42, 42, 0.9);
     mask: radial-gradient(circle at 0% 0%, transparent 100px, black 20px);
     -webkit-mask: radial-gradient(circle at 0% 0%, transparent 100px, black 20px);
 
@@ -34,7 +34,6 @@
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
 .dear_guests-card {
     margin-top: 20px;
-    display: inline-block;
     position: relative;
     z-index: 1;
     justify-content: center;
@@ -85,7 +84,7 @@
 
 .content_line {
     border: none; /* Убираем стандартную рамку */
-    height: 2px; /* Высота линии */
+    height: 1px; /* Высота линии */
     background-color: #FFFDF8; /* Цвет линии */
     margin-top: 50px;
 }

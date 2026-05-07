@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 // Целевая дата: 18 июля 2026, 16:00 МСК
 const targetDate = new Date(2026, 6, 18, 16, 0, 0);
 

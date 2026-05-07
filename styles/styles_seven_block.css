@@ -1,0 +1,24 @@
+
+
+.content_text_for_dres_cod {
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    color: #FFFDF8;
+    letter-spacing: 1px;
+    line-height: 25px;
+    border-left: 1px #FFFDF8 solid;
+}
+
+.div_for_img_dams_mans {
+    display: flex;
+    justify-content: center;
+}
+
+.img_dams {
+    width: 150px;
+}
+
+.img_mans {
+    width: 300px;
+}
