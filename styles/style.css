@@ -223,6 +223,27 @@ body {
 
 @font-face {
   font-family: 'Angst';
+  src: url('../fonts/angst/AngstVF.woff') format('woff'),
+  url('../fonts/angst/AngstVF.woff2') format('woff2'),
+  url('../fonts/angst/AngstVF.ttf') format('ttf'),
+  url('../fonts/angst/static/Angst-Normal.woff') format('woff'), 
+  url('../fonts/angst/static/Angst-Normal.woff2') format('woff2'),
+  url('../fonts/angst/static/Angst-NormalSerif.woff') format('woff'),
+  url('../fonts/angst/static/Angst-NormalSerif.woff2') format('woff2'),
+  url('../fonts/angst/static/Angst-Thin.woff') format('woff'),
+  url('../fonts/angst/static/Angst-Thin.woff2') format('woff2'),
+  url('../fonts/angst/static/Angst-Bold.woff') format('woff'),
+  url('../fonts/angst/static/Angst-Bold.woff2') format('woff2'),
+  url('../fonts/angst/static/Angst-BoldSerif.woff') format('woff'),
+  url('../fonts/angst/static/Angst-BoldSerif.woff2') format('woff2'),
+  url('../fonts/angst/static/Angst-ThinSerif.woff') format('woff'),
+  url('../fonts/angst/static/Angst-ThinSerif.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Angst_2';
   src: url('../fonts/Angst_Font/Angst-Normal.otf') format('otf'),
   url('../fonts/Angst_Font/Angst-Bold.otf') format('otf'),
   url('../fonts/Angst_Font/Angst-BoldSerif.otf') format('otf'),
