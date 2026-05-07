@@ -21,7 +21,6 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    background-color: #fffdf8b1;
     height: auto;
     width: auto;
 }
@@ -52,16 +51,8 @@ body {
 
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
 .wedding-card {
-    margin-top: 20px;
-    min-height: 85vh;
-    height: 100%;
-    width: 700px;
-    background-image: url(../image/image_1.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 3;
+    height: 100vh;
+    width: 100%;
 }
 
 /* Блок с датой, как на твоём скриншоте */
@@ -109,14 +100,11 @@ body {
 }
 
 .names {
-    position: absolute;
-    bottom: 5%;
-    width: 100%;
+
 }
 
 .nameDanDar {
-    text-align: left;
-    width: 30vh;
+    width: 400px;
 }
 
 /*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной 
