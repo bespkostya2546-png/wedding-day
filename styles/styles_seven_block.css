@@ -22,3 +22,50 @@
 .img_mans {
     width: 300px;
 }
+
+
+/*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной */
+@media (max-width: 768px) {
+
+    .content_text_for_dres_cod {
+        width: 300px;
+        font-size: 10px;
+        
+        line-height: 20px;
+    }
+
+    .img_dams {
+        width: 100px;
+    }
+
+    .img_mans {
+        width: 200px;
+    }
+    
+} 
+
+/* Телефон: уменьшаем внутренние отступы, чтобы контент дышал, но не был слишком прижат  */
+@media (max-width: 480px) {
+
+    .content_text_for_dres_cod {
+        width: 280px;
+        font-size: 9px;
+        
+        line-height: 20px;
+    }
+
+    .img_dams {
+        width: 90px;
+    }
+
+    .img_mans {
+        width: 190px;
+    }
+    
+}
+
+/* Телефон: уменьшаем внутренние отступы, чтобы контент дышал, но не был слишком прижат  */
+@media (max-width: 400px) {
+    
+    
+}

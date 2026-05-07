@@ -100,7 +100,8 @@ body {
 }
 
 .names {
-
+    display: flex;
+    justify-content: center;
 }
 
 .nameDanDar {
@@ -137,7 +138,7 @@ body {
 
     .nameDanDar {
         text-align: left;
-        width: 25vh;
+        width: 230px;
     }
 } 
 
