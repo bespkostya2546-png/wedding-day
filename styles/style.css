@@ -223,13 +223,13 @@ body {
 
 @font-face {
   font-family: 'Angst';
-  src: url('fonts/Angst_Font/Angst-Normal.otf') format('otf'),
-  url('fonts/Angst_Font/Angst-Bold.otf') format('otf'),
-  url('fonts/Angst_Font/Angst-BoldSerif.otf') format('otf'),
-  url('fonts/Angst_Font/Angst-NormalSerif.otf') format('otf'),
-  url('fonts/Angst_Font/Angst-Thin.otf') format('otf'),
-  url('fonts/Angst_Font/Angst-ThinSerif.otf') format('otf'),
-  url('fonts/Angst_Font/AngstVF.ttf') format('ttf');
+  src: url('../fonts/Angst_Font/Angst-Normal.otf') format('otf'),
+  url('../fonts/Angst_Font/Angst-Bold.otf') format('otf'),
+  url('../fonts/Angst_Font/Angst-BoldSerif.otf') format('otf'),
+  url('../fonts/Angst_Font/Angst-NormalSerif.otf') format('otf'),
+  url('../fonts/Angst_Font/Angst-Thin.otf') format('otf'),
+  url('../fonts/Angst_Font/Angst-ThinSerif.otf') format('otf'),
+  url('../fonts/Angst_Font/AngstVF.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
