@@ -23,7 +23,7 @@
 } 
 
 .card_four {
-    margin-top: 20px;
+    margin-top: 0px;
     display: block;
     position: relative;
     z-index: 1;
@@ -44,10 +44,11 @@
 }
 
 .card_img_location_torgestva {
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     width: 500px;
+    margin-bottom: 40px;
 }
 
 .img_location_torgestva {
