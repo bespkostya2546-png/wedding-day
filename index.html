@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/styles_eich_block.css">
     <title>Свадьба Даниила и Дарьи</title>
     <script src="javaskripts.js"></script>
+    <script src="google_sheets_script.js"></script>
 </head>
 <body>
 
@@ -340,7 +341,7 @@
                 <!-- Поле: Ваше имя -->
                 <div class="field-group">
                     <div class="input-name-wrapper">
-                        <input type="text" class="name-input" id="guestName" placeholder="Ваше имя и фамилия" autocomplete="off">
+                        <input type="text" class="name-input" id="userName" placeholder="Ваше имя и фамилия" autocomplete="off">
                     </div>
                 </div>
 
@@ -349,11 +350,11 @@
                     <span class="checkbox-label-title">Будете ли вы присутствовать на свадьбе?</span>
                     <div class="radio-group">
                         <label class="radio-item">
-                            <input type="radio" name="attendance" value="yes"> 
+                            <input type="radio" name="attendance" value="yes" id="attendanceYes"> 
                             <span>Да, буду</span>
                         </label>
                         <label class="radio-item">
-                            <input type="radio" name="attendance" value="no"> 
+                            <input type="radio" name="attendance" value="no" id="attendanceNo"> 
                             <span>Нет, не смогу</span>
                         </label>
                     </div>
@@ -367,27 +368,27 @@
                     <span class="checkbox-label-title">Выберите напитки, которые будете пить</span>
                     <div class="checkbox-group">
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="cognac"> 
+                            <input type="checkbox" name="drink" value="cognac" id="drinkCognac"> 
                             <span>КОНЬЯК</span>
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="samogon"> 
+                            <input type="checkbox" name="drink" value="samogon" id="drinkSamogon"> 
                             <span>САМОГОН</span>
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="whiskey"> 
+                            <input type="checkbox" name="drink" value="whiskey" id="drinkWhiskey"> 
                             <span>ВИСКИ</span>
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="champagne"> 
+                            <input type="checkbox" name="drink" value="champagne" id="drinkChampagne"> 
                             <span>ШАМПАНСКОЕ</span>
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="wine"> 
+                            <input type="checkbox" name="drink" value="wine" id="drinkWine"> 
                             <span>ВИНО</span>
                         </label>
                         <label class="checkbox-item">
-                            <input type="checkbox" name="drink" value="water"> 
+                            <input type="checkbox" name="drink" value="water" id="drinkWater"> 
                             <span>ВОДУ</span>
                         </label>
                     </div>
@@ -395,7 +396,7 @@
 
                 <!-- Кнопка отправить (без js функционала) -->
                 <div class="submit-btn-wrapper">
-                    <button class="submit-btn" type="button">ОТПРАВИТЬ</button>
+                    <button class="submit-btn" type="button" id="submitBtn">ОТПРАВИТЬ</button>
                 </div>
             </div>
         </div> 
