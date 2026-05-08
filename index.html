@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/styles_five_block.css">
     <link rel="stylesheet" href="styles/styles_six_block.css">
     <link rel="stylesheet" href="styles/styles_seven_block.css">
+    <link rel="stylesheet" href="styles/styles_eich_block.css">
     <title>Свадьба Даниила и Дарьи</title>
     <script src="javaskripts.js"></script>
 </head>
@@ -330,28 +331,76 @@
             </div>
         </div> 
 
-         <!-- Восьмой блок, анкета и контакты ->
-        <div class="fourd_block">
-            <div class="card_four">
-                <div class="card_img_hearts_four">
-                    <img class="img_hearts_four" src="image/hearts.svg">
+        <!-- Восьмой блок, анкета и контакты -->
+        <div class="seven_block">
+            <div class="wrapper_form">
+                <div class="card_for_img_anketa">
+                    <img class="img_anketa" src="image/Dams.png">
                 </div>
-                <div class="card_img_location_torgestva">
-                    <img class="img_location_torgestva" src="image/Mesto_torgestva.png">
-                </div>
-                <div class="card_img_location">
-                    <div class="content_text_card">
-                        <div class="content_text_four">
-                            <span>Будем ждать вас на нашей свадьбе</span>
-                        </div>
-                        <div class="content_text_four_2">
-                            <span>Ресторан "Lesnik" г. Бугульма ул. Вл. Ленина 152А</span>
-                        </div>
+                <!-- Поле: Ваше имя -->
+                <div class="field-group">
+                    <div class="input-name-wrapper">
+                        <input type="text" class="name-input" id="guestName" placeholder="Ваше имя и фамилия" autocomplete="off">
                     </div>
                 </div>
-                <hr class="content_line">
+
+                <!-- Блок "Будете ли вы присутствовать на свадьбе" - ТЕПЕРЬ РАДИОКНОПКИ -->
+                <div class="field-group">
+                    <span class="checkbox-label-title">Будете ли вы присутствовать на свадьбе?</span>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="attendance" value="yes"> 
+                            <span>Да, буду</span>
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="attendance" value="no"> 
+                            <span>Нет, не смогу</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Легкий визуальный разделитель (опционально) -->
+                <div class="divider-light"></div>
+
+                <!-- Блок "Выберите напитки которые будете пить" (чекбоксы) -->
+                <div class="field-group drinks-section">
+                    <span class="checkbox-label-title">Выберите напитки, которые будете пить</span>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="cognac"> 
+                            <span>КОНЬЯК</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="samogon"> 
+                            <span>САМОГОН</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="whiskey"> 
+                            <span>ВИСКИ</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="champagne"> 
+                            <span>ШАМПАНСКОЕ</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="wine"> 
+                            <span>ВИНО</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="drink" value="water"> 
+                            <span>ВОДУ</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Кнопка отправить (без js функционала) -->
+                <div class="submit-btn-wrapper">
+                    <button class="submit-btn" type="button">ОТПРАВИТЬ</button>
+                </div>
             </div>
-        </div> -->
+        </div> 
+
+
     </div>
 
     <!-- АУДИО ЭЛЕМЕНТ (скрытый) -->
