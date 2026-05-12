@@ -41,7 +41,22 @@ body {
     top: 0;
     bottom: 0;
     z-index: -1; /* Размещает видео под остальной контент */
+    image-rendering: crisp-edges;    /* Для лучшего качества */
+    image-rendering: -webkit-optimize-contrast;
 }
+
+/* #background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%) scale(1.02);
+    z-index: -1;
+    object-fit: cover;
+} */
 
 
 /* Основная карточка - полностью адаптивна 
@@ -172,6 +187,19 @@ body {
         text-align: left;
         width: 250px;
     }
+
+    #background-video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%) scale(1);
+        z-index: -1;
+        object-fit: fill;
+    } 
 }
 
 
