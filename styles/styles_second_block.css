@@ -10,14 +10,6 @@
     width: auto;
     padding: 30px;
 
-    position: relative; 
-    background: rgba(255, 255, 255, 0.15); 
-    backdrop-filter: blur(2px) saturate(180%); 
-    border: 1px solid rgba(255, 255, 255, 0.8); 
-    border-radius: 2rem; 
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3); 
-    
-
     /* mask: radial-gradient(circle at 5% 50%, transparent 60px, black 20px);
         /* radial-gradient(circle at calc(100% - 40px) 50px, transparent 20px, black 20px),
         radial-gradient(circle at 50% calc(100% - 30px), transparent 18px, black 18px); 
@@ -27,19 +19,19 @@
 }
 
 .second_block::before {
-    /* content: '';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(165, 42, 42, 0.9);
+    background-color: var(--global_backcolor);
     mask: radial-gradient(circle at 0% 0%, transparent 100px, black 20px);
-    -webkit-mask: radial-gradient(circle at 0% 0%, transparent 100px, black 20px); */
+    -webkit-mask: radial-gradient(circle at 0% 0%, transparent 100px, black 20px);
 
 } 
 
-.second_block::after { 
+/* .second_block::after { 
     content: ''; 
     position: absolute; 
     top: 0; 
@@ -47,13 +39,13 @@
     width: 100%; 
     height: 100%; 
     background: rgba(255, 255, 255, 0.1); 
-    border-radius: 2rem; 
+    border-radius: 2rem 0px 0px 0px; 
     backdrop-filter: blur(1px); 
     box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1), inset 0px -9px 0px -8px rgba(255, 255, 255, 1); 
     opacity: 0.6; 
     z-index: -1; 
     filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%); 
-}
+} */
 
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
 .dear_guests-card {
@@ -61,18 +53,6 @@
     position: relative;
     z-index: 1;
     justify-content: center;
-}
-
-.card_img_hearts {
-    width: 600px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img_hearts {
-    width: 85%;
 }
 
 .card_img_dear {

@@ -1,3 +1,9 @@
+:root { 
+
+    --global_backcolor: rgba(160, 15, 15, 0.7)
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,14 +27,14 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     width: auto;
 }
 
 #background-video {
     width: 100vw; /* Ширина, равная ширине области просмотра */
     height: 100vh; /* Высота, равная высоте области просмотра */
-    object-fit: fill; /* Автоматически масштабирует видео, сохраняя его пропорции и заполняя экран, при необходимости обрезая края */
+    object-fit: cover; /* Автоматически масштабирует видео, сохраняя его пропорции и заполняя экран, при необходимости обрезая края */
     position: fixed; /* Фиксирует положение видео относительно области просмотра */
     left: 0;
     right: 0;
@@ -50,9 +56,10 @@ body {
 } */
 
 /* Внутренний контент с отступами, которые уменьшаются на телефоне */
-.wedding-card {
+.card_first {
     height: 100vh;
     width: 100%;
+    display: grid;
 }
 
 /* Блок с датой, как на твоём скриншоте */
@@ -66,7 +73,7 @@ body {
     display: flex;
     justify-content: center;
     width: 300px;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .img_date {
@@ -102,10 +109,11 @@ body {
 .names {
     display: flex;
     justify-content: center;
+    margin-bottom: 150px;
 }
 
 .nameDanDar {
-    width: 400px;
+    width: 350px;
 }
 
 /*  Десктопная версия — немного другой максимальный размер, но остаётся воздушной 
@@ -129,16 +137,16 @@ body {
     }
 
     .date-numbers {
-        width: 250px;
+        width: 350px;
     }
 
     .names {
-        bottom: 5%;
+        margin-bottom: 150px;
     }
 
     .nameDanDar {
         text-align: left;
-        width: 230px;
+        width: 340px;
     }
 } 
 
@@ -153,20 +161,16 @@ body {
     }
 
     .date-numbers {
-        width: 180px;
+        width: 260px;
     }
 
     .names {
-        bottom: 5%;
+        margin-bottom: 150px;
     }
 
     .nameDanDar {
         text-align: left;
-        width: 200px;
-    }
-
-    .date-numbers span {
-        font-size: 40px;
+        width: 250px;
     }
 }
 

@@ -92,22 +92,13 @@
 /* Анимация биения сердца */
 @keyframes heartbeat {
     0% {
-        transform: scale(0.9);
+        transform: scale(0.96);
     }
-    14% {
-        transform: scale(0.95);
-    }
-    28% {
-        transform: scale(0.9);
-    }
-    42% {
-        transform: scale(0.95);
-    }
-    70% {
-        transform: scale(0.9);
+    50% {
+        transform: scale(1);
     }
     100% {
-        transform: scale(0.9);
+        transform: scale(0.96);
     }
 }
 

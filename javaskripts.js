@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isEntered) return;
         isEntered = true;
         
+        // Останавливаем музыку (если играет)
+        bgMusic.pause();
+        // Перематываем на начало
+        bgMusic.currentTime = 0;
+        
         // Запускаем музыку
         bgMusic.play().catch(error => {
             console.log('Автовоспроизведение заблокировано браузером');
