@@ -36,8 +36,10 @@
 } 
 
 .card_for_programm_day {
-    display: table;
+    display: flex;
     margin: 25px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .card_for_el {
@@ -46,6 +48,81 @@
     align-items: center;
     height: 100%;
 }
+
+
+
+/* Начальное состояние элементов (скрыты и смещены вниз) */
+.el_time, .img_text_program, .text_program_day {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform; 
+}
+
+/* Состояние при добавлении класса .animate-in */
+.five_block.animate-in .el_time,
+.five_block.animate-in .img_text_program,
+.five_block.animate-in .text_program_day {
+    opacity: 1;
+    transform: translateY(0);
+} 
+
+/* Поочередные задержки для каждого элемента */
+/* Ряд 1 */
+.five_block.animate-in .card_for_programm_day:nth-of-type(1) .el_time { 
+    transition-delay: 0.1s; 
+}
+.five_block.animate-in .card_for_programm_day:nth-of-type(1) 
+.img_text_program { 
+    transition-delay: 0.3s; 
+}
+.five_block.animate-in .card_for_programm_day:nth-of-type(1) 
+.text_program_day { 
+    transition-delay: 0.5s; 
+}
+
+/* Ряд 2 */
+.five_block.animate-in .card_for_programm_day:nth-of-type(2) .el_time { 
+    transition-delay: 0.8s; 
+}
+.five_block.animate-in .card_for_programm_day:nth-of-type(2) 
+.img_text_program { 
+    transition-delay: 1.0s; 
+}
+.five_block.animate-in .card_for_programm_day:nth-of-type(2) 
+.text_program_day { 
+    transition-delay: 1.2s; 
+}
+
+/* Ряд 3 */
+.five_block.animate-in .card_for_programm_day3 .el_time { 
+    transition-delay: 1.5s; 
+}
+.five_block.animate-in .card_for_programm_day3 
+.img_text_program { 
+    transition-delay: 1.7s; 
+}
+.five_block.animate-in .card_for_programm_day3
+.text_program_day { 
+    transition-delay: 1.9s; 
+}
+
+/* Ряд 4 */
+.five_block.animate-in .card_for_programm_day4 .el_time { 
+    transition-delay: 2.2s; 
+}
+.five_block.animate-in .card_for_programm_day4 
+.img_text_program { 
+    transition-delay: 2.4s; 
+}
+.five_block.animate-in .card_for_programm_day4 
+.text_program_day { 
+    transition-delay: 2.6s; 
+}  
+
+
+
 
 .img_time {
     width: 80px;

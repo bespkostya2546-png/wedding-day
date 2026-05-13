@@ -122,3 +122,5 @@ function setProgress(elementId, percent) {
 // Обновляем каждую секунду
 setInterval(updateTimer, 1000);
 updateTimer();
+
+

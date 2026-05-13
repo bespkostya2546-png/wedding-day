@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/styles_six_block.css">
     <link rel="stylesheet" href="styles/styles_seven_block.css">
     <link rel="stylesheet" href="styles/styles_eich_block.css">
+    <link rel="stylesheet" href="styles/styles_eich_foto.css">
     <title>Свадьба Даниила и Дарьи</title>
     <script src="javaskripts.js"></script>
     <script src="google_sheets_script.js"></script>
@@ -210,7 +211,7 @@
                         чтобы вы могли быть частью каждого из них.
                     </span>
                 </div>
-                <div class="card_for_programm_day delay-1">
+                <div class="card_for_programm_day">
                     <div class="card_for_el" > <!-- flex -->
                         <div class="el_time">
                             <img class="img_time" src="image/16_00.png">
@@ -223,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card_for_programm_day delay-2">
+                <div class="card_for_programm_day">
                     <div class="card_for_el"> <!-- flex -->
                         <div class="el_time">
                             <img class="img_time" src="image/17_00.png">
@@ -237,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card_for_programm_day delay-3">
+                <div class="card_for_programm_day3">
                     <div class="card_for_el"> <!-- flex -->
                         <div class="el_time">
                             <img class="img_time" src="image/18_00.png">
@@ -251,7 +252,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card_for_programm_day delay-4">
+                <div class="card_for_programm_day4">
                     <div class="card_for_el"> <!-- flex -->
                         <div class="el_time">
                             <img class="img_time" src="image/23_00.png">
@@ -402,6 +403,41 @@
             </div>
         </div> 
 
+        <!-- Восьмой блок, продолжение, фотки-->
+        <div class="slider-section">
+            <span>Посмотрите на нас счастливых</span>
+            <!-- Контейнер слайдера -->
+            <div class="slider-container">
+                
+                <!-- Карточки (Замени src на свои картинки) -->
+                <div class="slide" id="slide-1">
+                    <img src="image/foto_1.jpg" alt="Фото 1" class="img_foto">
+                </div>
+                <div class="slide" id="slide-2">
+                    <img src="image/foto_2.jpg" alt="Фото 2" class="img_foto">
+                </div>
+                <div class="slide" id="slide-3">
+                    <img src="image/foto_3.jpg" alt="Фото 3" class="img_foto">
+                </div>
+                <div class="slide" id="slide-4">
+                    <img src="image/foto_4.jpg" alt="Фото 3" class="img_foto">
+                </div>
+                
+                <!-- Стрелки -->
+                <button class="nav-btn prev-btn">❮</button>
+                <button class="nav-btn next-btn">❯</button>
+                
+                <!-- Точки пагинации -->
+                <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                </div>
+                
+            </div>
+        </div>
+
         <!-- Девятый блок, Контакты -->
         <div class="kontacts_block">
             <div class="card_four">
@@ -440,6 +476,84 @@
             </div>
         </div>
     </div> -->
-    
+    <script>
+        console.log('🚀 СКРИПТ ЗАГРУЗИЛСЯ!');   
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        let currentIndex = 1; // Начинаем со 2-го слайда (индекс 1) как с центрального
+
+        function updateSlider() {
+            // 1. Убираем все старые классы у слайдов и точек
+            slides.forEach(slide => slide.classList.remove('active', 'prev', 'next'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // 2. Вычисляем индексы
+            let prevIndex = currentIndex - 1;
+            let nextIndex = currentIndex + 1;
+
+            if (prevIndex < 0) prevIndex = slides.length - 1;
+            if (nextIndex >= slides.length) nextIndex = 0;
+
+            // 3. Сразу добавляем классы prev и next (они НЕ вызывают резких скачков)
+            slides[prevIndex].classList.add('prev');
+            slides[nextIndex].classList.add('next');
+
+            // 4. АКТИВАЦИЯ С ЗАДЕРЖКОЙ В 1мс (Приём для плавности)
+            // Браузер сначала отрисует 'prev' и 'next', а потом плавно добавит 'active'
+            setTimeout(() => {
+                slides[currentIndex].classList.add('active');
+                dots[currentIndex].classList.add('active');
+            }, 100);
+        }
+
+        // Слушатели событий для кнопок
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            updateSlider();
+        });
+
+        // Запускаем отображение при загрузке
+        updateSlider();
+
+
+        // ===== АНИМАЦИЯ ПРИ СКРОЛЛЕ: 5-й блок =====
+        console.log('🚀 СКРИПТ ЗАГРУЗИЛСЯ!');
+        document.addEventListener('DOMContentLoaded', () => {
+            const programBlock = document.querySelector('.five_block');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('🎬 .five_block появился в области видимости!');
+                        programBlock.classList.add('animate-in');
+                        
+                        // Проверка: добавился ли класс?
+                        setTimeout(() => {
+                            if (programBlock.classList.contains('animate-in')) {
+                                console.log('✨ Класс animate-in успешно добавлен');
+                            }
+                        }, 100);
+                        
+                        observer.unobserve(programBlock); // Анимация только один раз
+                    }
+                });
+            }, { 
+                threshold: 0.15, // Сработает, когда 15% блока видно
+                rootMargin: '0px 0px -100px 0px' // Чуть раньше, чтобы пользователь уже видел начало
+            });
+
+            observer.observe(programBlock);
+        });
+    </script>
 </body>
 </html>
