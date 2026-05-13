@@ -52,7 +52,7 @@
 
 
 /* Начальное состояние элементов (скрыты и смещены вниз) */
-.el_time, .img_text_program, .text_program_day {
+.el_time, .img_text_program, .text_program_day, .card_our_day {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
@@ -63,13 +63,17 @@
 /* Состояние при добавлении класса .animate-in */
 .five_block.animate-in .el_time,
 .five_block.animate-in .img_text_program,
-.five_block.animate-in .text_program_day {
+.five_block.animate-in .text_program_day,
+.five_block.animate-in .card_our_day  {
     opacity: 1;
     transform: translateY(0);
 } 
 
 /* Поочередные задержки для каждого элемента */
 /* Ряд 1 */
+.five_block.animate-in .card_our_day { 
+    transition-delay: 0.5s; 
+}
 .five_block.animate-in .card_for_programm_day1 .el_time { 
     transition-delay: 0.8s; 
 }
