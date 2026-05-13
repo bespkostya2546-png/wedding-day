@@ -70,55 +70,55 @@
 
 /* Поочередные задержки для каждого элемента */
 /* Ряд 1 */
-.five_block.animate-in .card_for_programm_day:nth-of-type(1) .el_time { 
-    transition-delay: 0.1s; 
-}
-.five_block.animate-in .card_for_programm_day:nth-of-type(1) 
-.img_text_program { 
-    transition-delay: 0.3s; 
-}
-.five_block.animate-in .card_for_programm_day:nth-of-type(1) 
-.text_program_day { 
-    transition-delay: 0.5s; 
-}
-
-/* Ряд 2 */
-.five_block.animate-in .card_for_programm_day:nth-of-type(2) .el_time { 
+.five_block.animate-in .card_for_programm_day1 .el_time { 
     transition-delay: 0.8s; 
 }
-.five_block.animate-in .card_for_programm_day:nth-of-type(2) 
+.five_block.animate-in .card_for_programm_day1
 .img_text_program { 
     transition-delay: 1.0s; 
 }
-.five_block.animate-in .card_for_programm_day:nth-of-type(2) 
+.five_block.animate-in .card_for_programm_day1 
 .text_program_day { 
     transition-delay: 1.2s; 
 }
 
-/* Ряд 3 */
-.five_block.animate-in .card_for_programm_day3 .el_time { 
+/* Ряд 2 */
+.five_block.animate-in .card_for_programm_day2 .el_time { 
     transition-delay: 1.5s; 
 }
-.five_block.animate-in .card_for_programm_day3 
+.five_block.animate-in .card_for_programm_day2
 .img_text_program { 
     transition-delay: 1.7s; 
 }
-.five_block.animate-in .card_for_programm_day3
+.five_block.animate-in .card_for_programm_day2 
 .text_program_day { 
     transition-delay: 1.9s; 
 }
 
-/* Ряд 4 */
-.five_block.animate-in .card_for_programm_day4 .el_time { 
+/* Ряд 3 */
+.five_block.animate-in .card_for_programm_day3 .el_time { 
     transition-delay: 2.2s; 
 }
-.five_block.animate-in .card_for_programm_day4 
+.five_block.animate-in .card_for_programm_day3 
 .img_text_program { 
     transition-delay: 2.4s; 
 }
-.five_block.animate-in .card_for_programm_day4 
+.five_block.animate-in .card_for_programm_day3
 .text_program_day { 
     transition-delay: 2.6s; 
+}
+
+/* Ряд 4 */
+.five_block.animate-in .card_for_programm_day4 .el_time { 
+    transition-delay: 2.8s; 
+}
+.five_block.animate-in .card_for_programm_day4 
+.img_text_program { 
+    transition-delay: 3.0s; 
+}
+.five_block.animate-in .card_for_programm_day4 
+.text_program_day { 
+    transition-delay: 3.2s; 
 }  
 
 
